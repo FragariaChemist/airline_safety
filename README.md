@@ -38,11 +38,13 @@ ___
 |**text_aviation_data.csv**|*various*|Generated|clean_aviation_data.csv that has been processed with SpaCy and ready for modeling.
 |
 ### Dataset Sources
-- * [NTSB Aviation Accident Database](https://www.ntsb.gov/Pages/AviationQueryV2.aspx)
+* [NTSB Aviation Accident Database](https://www.ntsb.gov/Pages/AviationQueryV2.aspx)
 ---
 ## Analysis  ---THIS IS NOT COMPLETE, BUT KEEPNG FOR EASIER FORMATTING
 
-A total of 2800 posts were collected and the text inside post titles and bodies were analyzed.  1557 posts (56%) originated from r/fountains and 1243 (44%) from r/pens.  Four posts were dropped due to no text (emojis and photos only) or if they just contained stop words.
+A total of 559 observations were cleaned and analysed from a raw dataset of 2563 observations.  The original dataset was filtered from the NTSB database based on commercial airlines only.  We ran into many issues which stem from a lack of consistency in data collection.  There were many permutations of the same value.  For example, Dallas/Forth Worth Airport was written or abbreviated differently multiple times.  Another example was a value of 'over the' in the city column and 'ocean' in the country column.  Our research indicated that most crashes happen on the ground, so we filtered out all columns with airport ID.
+
+Even narrowing it down by available airpot ID, we had to clean many of the airline names and airplane make/models.  Like location, there seemed to be no clear standardization of data entry.  For airport ID and airplane model, there were a handful of values that appeared only once.  This, along with a small dataset, was understood to likely not create a useful model.  However, due to time constraints and spending a lot of time on data cleaning, we decided to move forward with what we had.  This project is a very good example of how domain knowledge could have helped us.
 
 SpaCy was used as the natural language processor before modeling the data.
 * [Text Classification using Python SpaCy](https://machinelearninggeek.com/text-classification-using-python-spacy/)
@@ -50,46 +52,45 @@ SpaCy was used as the natural language processor before modeling the data.
  * [Natural Language Processing With SpaCy in Python](https://realpython.com/natural-language-processing-spacy-python/#lemmatization)
 
 
-The following table outlines which models were implemented and their results.  The goal was to achieve a high level of specificity, therefore the Bernoulli Naive Bayes & CountVectorizer model was chosen for text analysis. Ideally, the model should never classify a r/pens post as a r/fountainpens post as it is a more specialized group.
+Kristina and Holly worked independently on varios models. The following table outlines the best models and their results.  The goal was to achieve high accuracy levels irregardless of sensitivity and specificity.  Predicting budget airlines based on accident data, including fatalities, should be correct as often as possible given the serious nature of the topic
+Budget airlines are the positive target. The baseline model is 78%.
+Contributor|Model Type|Train Data Accuracy|Test Data Accuracy|Prediction Accuracy|Sensitivity|Specificity|Precision|
+|---|---|---|---|---|---|---|---|
+**Holly**|**MODEL**|0%|0%|0%|0%|0%|90%|
+**Kristina**|**Logistic Regression & CountVectorizer**|99.52%|81.43%|77.86%|48.39%|90.83%|60%|
 
-r/fountainpens posts is considered the positive target. The baseline model is 56%.
-|Model Type|Train Data Accuracy|Test Data Accuracy|Prediction Accuracy|Sensitivity|Specificity|Precision|
-|---|---|---|---|---|---|---|
-|**Logistic Regression & CountVectorizer**|98%|89%|89%|92%|87%|90%|
-|**Logistic Regression & TD IDF**|89%|87%|87%|91%|82%|86%|
-**Bernoulli Naive Bayes & CountVectorizer**|90%|90%|90%|88%|91%|93%
 
 #### Parameters used per model
 
-*Logistic Regression &  CountVectorizer*<br>
-    cvec__max_features 10000<br>
-    cvec__min_df: 0.001<br>
-    cvec__max_df: 0.7<br>
-    cvec__ngram_range: (1,2)<br>
-    logreg__C: 1.0<br>
-    logreg__penalty: l2 (Ridge)<br>
-    logreg__solver: liblinear'<br>
+**Holly** - Model*<br>
+    Parameters
 
-*Logistic Regression & TFI DF*<br>
-    tvec__max_features: 300<br>
-    tvec__min_df: 0.001<br>
-    tvec__max_df: 0.7<br>
-    tvec__ngram_range: (1, 2)<br>
-    logreg__C: 1.0<br>
-    logreg__penalty: l2 (Ridge)<br>
-    logreg__solver: liblinear
+**Kristina** - Logistic Regression & CountVectorizer*<br>
+    cvec__max_df: 0.9<br>
+    cvec__max_features: 200<br>
+    cvec__min_d': 3<br>
+    cvec__ngram_range: (1, 3)<br>
+    lr__C: 10<br>
+    lr__penalty: l2<br>
+    lr__solver: liblinear<br>
 
-*Bernoulli Naive Bayes & CountVectorizer*<br>
-    bb__alpha: 0.75,<br>
-    cvec__max_features: 2000<br>
-    cvec__min_df: 3<br>
-    cvec__max_df: 0.7<br>
-    cvec__ngram_range: (1,3)
+*Features Used*
+    
+Event Type<br>
+Highest Injury Level<br>
+Fatal Injury Count<br>
+Serious Injury Count<br>
+Minor Injury Count<br>
+Probable Cause<br>
+Airport ID<br>
+Aircraft Damage<br>
+Make<br>
+Model<br>
+
 
 ### Confusion Matrices
-* [Logistic Regression & CountVectorizer](plot_images/logreg_cvec_confusion_matrix.png)
-* [Logistic Regression & TF IDF](plot_images/logreg_tfidf_confusion_matrix.png)
-* [Bernoulli Naive Bayes & CountVectorizer](plot_images/bernoulli_nb_cvec_confusion_matrix.png)
+* [Kristina's Logistic Regression & CountVectorizer](images/logreg_cvec_confusion_matrix_display_kh.png)
+
 
 
 ---
