@@ -11,7 +11,7 @@ The aviation industry is a critical sector in the economy as it facilitates trav
 
 ### Problem Statement
 
-Can we conclude which airlines are likely to have an injury or fatality?  
+The overall safety commercial aviation has improved over the years but there remains a pressing need to reduce the incidences of accidents and fatalities and mitigate their impact.  Can we conclude which airlines are likely to have an injury or fatality?  Do particular airlines need to focus on more safety measures than others?  The need to answers these questions   
 
 ---
 
