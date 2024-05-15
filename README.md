@@ -1,5 +1,5 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 4: Predicting Budget Airlines Based on NTSB Aviation Accident Database
-### Background and Introduction
+## Background and Introduction
 ___
 
 The aviation industry is a critical sector in the economy as it facilitates travel, business, and military. Despite signigicant advancements in technology and safety, accidents still occur which result in injuries and fatalities.
@@ -36,7 +36,7 @@ Budget airlines typically forego services offered on other airlines in exchange 
 * Southwest
 * Sun Country
 
-  **NON BUGET**
+**NON BUGET**
 * American
 * Continental
 * Delta
@@ -65,7 +65,7 @@ ___
 |**clean_aviation_data.csv**|*various*|Generated|Cleaned aviation_data.csv that is ready for NLP processing and modeling.
 |**text_aviation_data.csv**|*various*|Generated|clean_aviation_data.csv that has been processed with SpaCy and ready for modeling.
 |
-### Dataset Sources
+## Dataset Sources
 * [NTSB Aviation Accident Database](https://www.ntsb.gov/Pages/AviationQueryV2.aspx)
 ---
 ## Analysis
@@ -94,7 +94,7 @@ Contributor|Model Type|Train Data Accuracy|Test Data Accuracy|Prediction Accurac
 **Kristina**|**Logistic Regression & CountVectorizer**|99.52%|81.43%|77.86%|48.39%|90.83%|60%|
 
 
-#### Parameters used per model
+### Parameters used per model
 
 **Holly** - Random Forest*<br>
     rf_max_depth: 2<br>
