@@ -50,6 +50,11 @@ ___
 * [Statistica - Most Airplane Accidents Happen During Landing](https://www.statista.com/chart/31529/most-airplane-accidents-happen-during-landing/)
 * [FAA - General Aviation Maintenance-Related Accidents: A Review of Ten Years of NTSB Data](https://www.tc.faa.gov/its/worldpac/techrpt/am02-23.pdf)
 * [Worried About How Safe It Is To Fly?  Here's What the Experts Have To Say - CNN](https://www.cnn.com/travel/worried-about-flying-heres-what-the-experts-have-to-say/index.html)
+* [Why This Plane Had A Dangerous Reputation: The DC-10](https://medium.com/@salman12788/why-this-plane-had-a-dangerous-reputation-the-dc-10-954f4da7aafe)
+* [Uniterd Airlines Flight 232](https://en.wikipedia.org/wiki/United_Airlines_Flight_232)
+* [A Comprehensive Guide to Aircraft Inspections: Types and Checklists](https://www.acumen.aero/aircraft-inspections#topic-20)
+* [Accident or Incident?  Explaining Aircraft Damage Assessment](https://safetycompass.wordpress.com/2021/09/30/accident-or-incident-explaining-aircraft-damage-assessment/)
+
 ## Dataset Dictionary
 ___
 
