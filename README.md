@@ -1,8 +1,18 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 4: Predicting Budget Airlines Based on NTSB Aviation Accident Database
+
+## Jupyter Notebook Table of Contents
+* 01_data_cleaning_eda_hh_kh -- Combination code of Holly and Kristina's data cleaning
+* 02_datacleaning_hh -- Holly's code of data cleaning
+* 03_spacy_nlp_processing_kh -- Spacy language processing and EDA code
+* 04_data_exploration_though_vis_kh --  Kristina's data exploration plots/graphs
+* 05_data_viz_hh -- Holly's data exploration plots/graphs
+* 06_modeling_hh -- Holly's modeling code
+* 07_logistic_regression_cvec_pda_kh -- Kristina's models with logistic regression and PDA
+* 08_trees_forests_bagging_boosting_kh -- Kristina's models with random forests, bagging, and boosting
 ## Background and Introduction
 ___
 
-The aviation industry is a critical sector in the economy as it facilitates travel, business, and military. Despite signigicant advancements in technology and safety, accidents still occur which result in injuries and fatalities.
+The aviation industry is a critical sector in the economy as it facilitates travel, business, and military. Despite significant advancements in technology and safety, accidents still occur which result in injuries and fatalities.
 
 "The latest safety report from IATA, the trade association of the world's airlines, states that in 2022 there were a total of 39 commercial aviation accidents in the world, with 158 on-board fatalities – equalling one accident every 0.83 million flights." - By Jacopo Prisco, CNN | Feb 10, 2024
 
@@ -11,7 +21,7 @@ The National Transportation Safety Board curates a [database](https://www.ntsb.g
 
 ## Problem Statement
 ___
-The overall safety commercial aviation has improved over the years but there remains a pressing need to reduce the incidences of accidents and fatalities and mitigate their impact.  Preventing accidents requires in investment in staff training and maintanance upkeep.  We are interested in predicting airlines based on safety data records and if budget airlines have similar safety records as non-budget airlines.  We will do this by collecting data from the NTSB aviation accident database concerning american commercial airlines.  Since most accidents happen at or near airports, we will focus on occurances at different airports. The following combination of features will be considered:
+The overall safety commercial aviation has improved over the years but there remains a pressing need to reduce the incidences of accidents and fatalities and mitigate their impact.  Preventing accidents requires an investment in staff training and maintainance upkeep.  We are interested in predicting airlines based on safety data records and if budget airlines have similar safety records as non-budget airlines.  We will do this by collecting data from the NTSB aviation accident database concerning american commercial airlines.  Since most accidents happen at or near airports, we will focus on occurances at different airports. The following combination of features will be considered:
 
 * Event Type (Accident or Occurance)
 * Highest Injury Level
@@ -25,7 +35,7 @@ The overall safety commercial aviation has improved over the years but there rem
 * Aircraft Model
 * Aircraft Damage
 
-Budget airlines typically forego services offered on other airlines in exchange for cheaper ticket prices.  They typically operate with only one type of plane which makes training and maintenance more streamlined.  We have catorgoized the airlines in the dataset as follows:
+Budget airlines typically forego services offered on other airlines in exchange for cheaper ticket prices.  They typically operate with only one type of plane which makes training and maintenance more streamlined.  We have categorized the airlines in the dataset as follows:
 
 **BUDGET**
 * Alaska
