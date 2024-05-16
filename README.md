@@ -1,17 +1,15 @@
-#### Aviation Accidents
+## Aviation Accidents
 
 ### Introduction
-
-The aviation industry is a critical sector in the economy as it facilitates travel, business, and military.  Despite signigicant advancements in technology and safety, accidents still occur which result in injuries and fatalities. 
-
-"The latest safety report from IATA, the trade association of the world's airlines, states that in 2022 there were a total of 39 commercial aviation accidents in the world, with 158 on-board fatalities – equalling one accident every 0.83 million flights." - By Jacopo Prisco, CNN | Feb 10, 2024
 
 
 ---
 
 ### Problem Statement
 
-The overall safety commercial aviation has improved over the years but there remains a pressing need to reduce the incidences of accidents and fatalities and mitigate their impact.  Can we conclude which airlines are likely to have an injury or fatality?  Do particular airlines need to focus on more safety measures than others?  The need to answers these questions   
+The aviation industry is a critical sector in the economy as it facilitates travel, business, and military.  Despite significant advancements in technology and safety, accidents still occur which result in injuries and fatalities.
+
+The overall safety commercial aviation has improved over the years but there remains a pressing need to reduce the incidences of accidents and fatalities and mitigate their impact.  Can we conclude which airlines are likely to have an injury or fatality?  Do particular airlines need to focus on more safety measures than others?  The need for answers to these questions would help benefit stakeholders in the industry and could decrease injuries.  
 
 ---
 
@@ -22,14 +20,10 @@ Data was pulled from the National Safety Board (NTSB) in which 2563 rows and 38 
 
 ---
 
-### Executive Summary
-
-
----
-
 
 ### Conclusions & Recommendations
 
 
+Further research could be conducted to confirm that safety performance continues to increase as time goes on. 
 
-IATA says that in the last 10 years, the industry has improved its overall safety performance by 48%.  Further research could be conducted to confirm that safety performance is increases as time goes on. 
+Maintain robust data collection to ensure that high-quailty data is available for ongoing analysis. Invest in training employees who work at airlines to mitigate risks of injury to crew and customers. 
